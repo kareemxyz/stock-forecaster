@@ -15,7 +15,7 @@ def get_filtered_closing_data(stock, days_before=0):
         raw_dataframe = web.DataReader(stock, data_source="yahoo")
         closing_data = raw_dataframe.filter(["Close"])
         data_set = closing_data[-days_before:].values
-        return scaler.fit_transform(data_set), stock
+        return (scaler.fit_transform(data_set), stock)
     except:
         print("Failed to fetch stock data! Please input a valid stock.")
         return get_filtered_closing_data(input("Stock: ").upper())
@@ -51,6 +51,7 @@ def get_predictated_closing_price(stock):
     training_data = get_training_data(filtered_data)
     model = train_model(*training_data)
 
+    last_60_days = [get_filtered_closing_data(stock, 60)[0]]
     last_60_days = np.array(last_60_days)
     reshape = (last_60_days, (last_60_days.shape[0], last_60_days.shape[1], 1))
 

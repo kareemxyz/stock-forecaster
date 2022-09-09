@@ -37,7 +37,7 @@ pip3 install numpy && pip3 install pandas-datareader && pip3 install scikit-lear
 Running this script is straightforward. Simply run in your terminal session:
 
 ```bash
-python3 stock_forecaster.py
+python stock_forecaster.py
 ```
 
 After being prompted to input a stock name, the script will begin to forecast the stock's predicted closing price for the day. Enjoy!
