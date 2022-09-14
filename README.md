@@ -11,7 +11,7 @@ This code is meant to be as simple and easy-to-use as possible. Despite this, th
 To clone this repoistory using Git, use
 
 ```bash
-git clone https://github.com/kareemxyz/stock-forecaster.git
+git clone https://github.com/kareemxyz/stock_forecaster.git
 ```
 
 If you aren't familiar with Git, navigate to the top-left of this page and find the green button labeled "Clone or download". Clicking this and then click "Download ZIP". Extract the contents of the downloaded .zip file.
@@ -19,7 +19,7 @@ If you aren't familiar with Git, navigate to the top-left of this page and find 
 Open a terminal session and navigate to this folder, using `cd`.
 
 ```bash
-cd stock-forecaster/
+cd stock_forecaster/
 ```
 
 ### 2. Installing dependencies
