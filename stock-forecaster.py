@@ -12,7 +12,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 def get_filtered_closing_data(stock, days_before=0):
     try:
-        raw_dataframe = web.DataReader(stock, data_source="yahoo")
+        raw_dataframe = web.DataReader(stock, data_source="yahoo", end="2022-9-8")
         closing_data = raw_dataframe.filter(["Close"])
         data_set = closing_data[-days_before:].values
         return (scaler.fit_transform(data_set), stock)
